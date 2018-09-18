@@ -3,7 +3,18 @@
  * For more info: https://developer.wordpress.org/themes/basics/theme-functions/
  *
  */			
-	
+
+
+/**
+ * Required: set 'ot_theme_mode' filter to true.
+ */ 
+add_filter( 'ot_theme_mode', '__return_true' );
+
+/**
+ * Required: include OptionTree.
+ */
+require( trailingslashit( get_template_directory() ) . 'option-tree/ot-loader.php' ); 
+
 // Theme support options
 require_once(get_template_directory().'/functions/theme-support.php'); 
 

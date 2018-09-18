@@ -434,8 +434,8 @@ PLUGIN STYLES
 }
 
 // Hover underline block
-$menu-underline-from-center-bg: rgba(252,44,154,1);
-$menu-underline-from-center-border-thickness: 0.225rem;
+$menu-underline-from-center-bg: rgba(0,0,0,0.8);
+$menu-underline-from-center-border-thickness: 0.125rem;
 
 .hover-underline-menu {
   width: 100%;
@@ -455,7 +455,7 @@ $menu-underline-from-center-border-thickness: 0.225rem;
         content: "";
         position: absolute;
         top: calc(100% - #{$menu-underline-from-center-border-thickness});
-        border-bottom: $menu-underline-from-center-border-thickness solid rgba(252,44,154,1);
+        border-bottom: $menu-underline-from-center-border-thickness solid rgb(252, 44, 154);
         left: 50%;
         right: 50%;
         transition: all 0.5s ease;
@@ -468,4 +468,9 @@ $menu-underline-from-center-border-thickness: 0.225rem;
       }
     }
   }
+}
+div.header-banner {
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: whitesmoke;
 }
