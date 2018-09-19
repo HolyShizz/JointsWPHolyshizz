@@ -156,7 +156,6 @@ gulp.task('browsersync', function() {
 
     browserSync.init(files, {
 		proxy: LOCAL_URL,
-		
     });
 
     gulp.watch(SOURCE.styles, gulp.parallel('styles'));
