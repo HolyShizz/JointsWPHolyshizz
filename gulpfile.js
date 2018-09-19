@@ -11,7 +11,7 @@ var gulp  = require('gulp'),
 // Modify these variables to match your project needs
 
 // Set local URL if using Browser-Sync
-const LOCAL_URL = 'http://localhost/wordpress';
+const LOCAL_URL = 'localhost/wordpress';
 
 // Set path to Foundation files
 const FOUNDATION = 'node_modules/foundation-sites';
@@ -155,7 +155,8 @@ gulp.task('browsersync', function() {
     ];
 
     browserSync.init(files, {
-	    proxy: LOCAL_URL,
+		proxy: LOCAL_URL,
+		
     });
 
     gulp.watch(SOURCE.styles, gulp.parallel('styles'));
