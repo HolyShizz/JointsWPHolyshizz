@@ -151,45 +151,87 @@ get_header(); ?>
 			</div>
 
 			<div class="block-swiper">
+
 				<div class="course-select">
 
-					<div class="grid-x">
+					<div class="grid-x show-for-large">
 						<?php 
-						echo '<div class="cell large-9 small-12">
-							<ul class="accordion menu align-justify" data-responsive-accordion-tabs="accordion large-tabs medium-accordion" id="upper-tabs">';
-						$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
-						if (!empty ($upper_tabs) ) {
+							echo '<div class="cell ">
+								<ul class="tabs" data-tabs="tabs" id="upper-tabs">';
+								$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
+								if (!empty ($upper_tabs) ) {
 
-							foreach ($upper_tabs as $upper_tab_single) {
+								foreach ($upper_tabs as $upper_tab_single) {
 
-								echo '<li class="tabs-title"><a href="'.$upper_tab_single['tabs_foundation_id'].'"> '.$upper_tab_single['title'].' </a></li>';
+									echo '<li class="tabs-title"><a href="'.$upper_tab_single['tabs_foundation_id'].'"> '.$upper_tab_single['title'].' </a></li>';
 
+								}
 							}
-						};
-						echo '</div>';
+							echo 
+							'</ul></div>';
+							
 						?>
 
 
 
 
 						<?php 
-						echo '<div class="cell large-3 small-12">
-							<div class="tabs-content" data-tabs-content="upper-tabs">';
-						$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
-						if (!empty ($upper_tabs) ) {
+							echo '<div class="cell ">
+								<div class="tabs-content" data-tabs-content="upper-tabs">';
+							$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
+							if (!empty ($upper_tabs) ) {
 
-							foreach ($upper_tabs as $upper_tab_single) {
+								foreach ($upper_tabs as $upper_tab_single) {
 
 								echo '<div class="tabs-panel" id="'.$upper_tab_single['tabs_foundation_id'] = substr($upper_tab_single['tabs_foundation_id'], 1).'">
-								<p class="upper-tab-title">'.$upper_tab_single['title'].' </p>
-								<p class="upper-tab-content">'.$upper_tab_single['tabs_foundation_content'].'</p></div>';
-
+									 <a class="upper-tab-title">'.$upper_tab_single['title'].' </a>
+									 <a class="upper-tab-content">'.$upper_tab_single['tabs_foundation_content'].'</a>
+									 </div>';
+								}
 							}
-						};
+							echo '</div>
+							</div>';
+						?>
+					</div>
 
+					<div class="grid-x show-for-medium-only">
+						<?php 
+							echo '<div class="cell ">
+								<ul class="tabs" data-responsive-accordion-tabs="accordion" id="upper-tabs-for-med">';
+								$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
+								if (!empty ($upper_tabs) ) {
+
+								foreach ($upper_tabs as $upper_tab_single) {
+
+									echo '<li class="tabs-title"><a href="'.$upper_tab_single['tabs_foundation_id'].'1"> '.$upper_tab_single['title'].' </a></li>';
+
+								}
+							}
+							echo 
+							'</ul></div>';
+							
 						?>
 
 
+
+
+						<?php 
+							echo '<div class="cell">
+								<div class="tabs-content" data-tabs-content="upper-tabs-for-med">';
+							$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
+							if (!empty ($upper_tabs) ) {
+
+								foreach ($upper_tabs as $upper_tab_single) {
+
+								echo '<div class="tabs-panel" id="'.$upper_tab_single['tabs_foundation_id'] = substr($upper_tab_single['tabs_foundation_id'], 1).'1">
+									 <a class="upper-tab-title">'.$upper_tab_single['title'].' </a>
+									 <a class="upper-tab-content">'.$upper_tab_single['tabs_foundation_content'].'</a>
+									 </div>';
+								}
+							}
+							echo '</div>
+							</div>';
+						?>
 					</div>
 				</div>
 			</div>

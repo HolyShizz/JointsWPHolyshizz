@@ -1,0 +1,39 @@
+	<div class="course-select">
+
+					<div class="grid-x">
+						<?php 
+						echo '<div class="cell large-9 small-12">
+							<ul class="accordion" data-responsive-accordion-tabs="accordion medium-tabs large-accordion" id="upper-tabs">';
+						$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
+						if (!empty ($upper_tabs) ) {
+
+							foreach ($upper_tabs as $upper_tab_single) {
+
+								echo '<li class="tabs-title"><a href="'.$upper_tab_single['tabs_foundation_id'].'"> '.$upper_tab_single['title'].' </a></li>';
+
+							}
+						};
+						echo '</div>';
+						?>
+
+
+
+
+						<?php 
+						echo '<div class="cell large-3 small-12">
+							<div class="tabs-content" data-tabs-content="upper-tabs">';
+						$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
+						if (!empty ($upper_tabs) ) {
+
+							foreach ($upper_tabs as $upper_tab_single) {
+
+								echo '<div class="tabs-panel" id="'.$upper_tab_single['tabs_foundation_id'] = substr($upper_tab_single['tabs_foundation_id'], 1).'">
+								<p class="upper-tab-title">'.$upper_tab_single['title'].' </p>
+								<p class="upper-tab-content">'.$upper_tab_single['tabs_foundation_content'].'</p></div>';
+
+							}
+						};
+
+						?>
+					</div>
+				</div>

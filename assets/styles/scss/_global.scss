@@ -619,36 +619,43 @@ header {
 	padding: 60px 0;
 	background-color: #232323;
 
-	.tabs, .tabs-content, .accordion, .accordion-item {
+	.tabs,
+	.tabs-content {
 		background-color: transparent;
 		color: whitesmoke;
 		margin: 5px;
 		border: none;
 	}
+
 	.tabs-content {
 		height: 350px;
 	}
 
 	.tabs+.is-active {
-		background-color: #fe609f;
-		box-shadow: 0 5px 33.6px 1.4px rgba(254, 96, 159, .29);
-		text-shadow: #000 0 3px 4px;
+		a {
+			background-color: #fe609f;
+			box-shadow: 0 5px 33.6px 1.4px rgba(254, 96, 159, .29);
+			text-shadow: #000 0 3px 4px;
+		}
+	}
+	.tabs-title {
+		width: 27%;
+	}
+	.tabs-title {
+		border: 1px solid #3d3d3d;
+		border-radius: 5px;
+
+		a {
+			text-align: center;
+			background-color: transparent;
+			color: whitesmoke;
+			font-size: 15px;
+			font-weight: 500;
+			padding-bottom: 22px;
+
+		}
 	}
 
-	.tabs-title {
-		border: 1px solid #3d3d3d; 
-		width: 27%;
-		border-radius: 5px;
-		a {
-		text-align: center;
-		background-color: transparent;
-		color: whitesmoke;
-		font-size: 15px;
-		font-weight: 500;
-		padding-bottom: 22px;
-		
-	}
-	}
 	.tabs-title a:focus {
 		background-color: #fe609f;
 		box-shadow: 0 5px 33.6px 1.4px rgba(254, 96, 159, .29);
