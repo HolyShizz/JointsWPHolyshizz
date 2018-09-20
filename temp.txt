@@ -37,3 +37,30 @@
 						?>
 					</div>
 				</div>
+
+                <div class="course-select">
+
+					<div class="grid-x">
+						<?php 
+						echo '<div class="cell large-12 ">
+							<ul class="accordion" data-responsive-accordion-tabs="tabs-large accordion-medium" id="upper-tabs">';
+						$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
+						if (!empty ($upper_tabs) ) {
+
+							foreach ($upper_tabs as $upper_tab_single) {
+
+								echo '<li class="accordion-item" data-accordion-item>
+								
+								<a class="accordion-title"> '.$upper_tab_single['title'].' </a>
+								<div class="accordion-content" data-tab-content> 
+								<p class="upper-tab-title">'.$upper_tab_single['title'].' </p>
+								<p class="upper-tab-content">'.$upper_tab_single['tabs_foundation_content'].'</p>
+								</div>
+								</li>';
+							}
+						}
+						echo '</ul> </div>';
+						?>
+
+					</div>
+				</div>

@@ -613,14 +613,15 @@ header {
 }
 
 .course-select {
-	width: 85%;
-	border-radius: 13px;
+	width: 100%;
+	border-radius: 15px;
 	margin: 0 auto;
-	padding: 60px 0;
+	padding: 60px 4px;
 	background-color: #232323;
 
 	.tabs,
-	.tabs-content, .accordion-content {
+	.tabs-content,
+	.accordion-content {
 		background-color: transparent;
 		color: whitesmoke;
 		margin: 5px;
@@ -631,6 +632,8 @@ header {
 		height: 350px;
 	}
 
+	
+
 	.tabs+.is-active {
 		a {
 			background-color: #fe609f;
@@ -638,9 +641,11 @@ header {
 			text-shadow: #000 0 3px 4px;
 		}
 	}
+
 	.tabs-title {
 		width: 27%;
 	}
+
 	.tabs-title {
 		border: 1px solid #3d3d3d;
 		border-radius: 5px;
@@ -659,5 +664,22 @@ header {
 	.tabs-title a:focus {
 		background-color: #fe609f;
 		box-shadow: 0 5px 33.6px 1.4px rgba(254, 96, 159, .29);
+	}
+}
+.accordion {
+	background-color: transparent;
+	.accordion-title:focus,
+	.accordion-title:hover {
+			background-color: #fe609f;
+			box-shadow: 0 5px 33.6px 1.4px rgba(254, 96, 159, .29);
+			text-shadow: #000 0 3px 4px;
+			color: whitesmoke;
+	}
+	.accordion-title + .is-active {
+		a {
+			background-color: #fe609f;
+			box-shadow: 0 5px 33.6px 1.4px rgba(254, 96, 159, .29);
+			text-shadow: #000 0 3px 4px;
+		}
 	}
 }
