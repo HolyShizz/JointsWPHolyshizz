@@ -154,9 +154,9 @@ get_header(); ?>
 
 				<div class="course-select">
 
-					<div class="grid-x show-for-large">
+					<div class="grid-x margin-x show-for-large ">
 						<?php 
-							echo '<div class="cell ">
+							echo '<div class="cell large-8 align-right">
 								<ul class="tabs" data-tabs="tabs" id="upper-tabs">';
 								$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
 								if (!empty ($upper_tabs) ) {
@@ -176,16 +176,16 @@ get_header(); ?>
 
 
 						<?php 
-							echo '<div class="cell ">
+							echo '<div class="cell large-3">
 								<div class="tabs-content" data-tabs-content="upper-tabs">';
 							$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
 							if (!empty ($upper_tabs) ) {
 
 								foreach ($upper_tabs as $upper_tab_single) {
 
-								echo '<div class="tabs-panel" id="'.$upper_tab_single['tabs_foundation_id'] = substr($upper_tab_single['tabs_foundation_id'], 1).'">
-									 <a class="upper-tab-title">'.$upper_tab_single['title'].' </a>
-									 <a class="upper-tab-content">'.$upper_tab_single['tabs_foundation_content'].'</a>
+								echo '<div class="tabs-panel upper-tabs" id="'.$upper_tab_single['tabs_foundation_id'] = substr($upper_tab_single['tabs_foundation_id'], 1).'">
+									 <h4 class="upper-tab-title">'.$upper_tab_single['title'].' </h4>
+									 <p class="upper-tab-content">'.$upper_tab_single['tabs_foundation_content'].'</p>
 									 </div>';
 								}
 							}
@@ -193,6 +193,8 @@ get_header(); ?>
 							</div>';
 						?>
 					</div>
+
+
 
 					<div class="grid-x show-for-medium-only">
 						<?php 
@@ -223,9 +225,9 @@ get_header(); ?>
 
 								foreach ($upper_tabs as $upper_tab_single) {
 
-								echo '<div class="tabs-panel" id="'.$upper_tab_single['tabs_foundation_id'] = substr($upper_tab_single['tabs_foundation_id'], 1).'1">
-									 <a class="upper-tab-title">'.$upper_tab_single['title'].' </a>
-									 <a class="upper-tab-content">'.$upper_tab_single['tabs_foundation_content'].'</a>
+								echo '<div class="tabs-panel upper-tabs-for-med" id="'.$upper_tab_single['tabs_foundation_id'] = substr($upper_tab_single['tabs_foundation_id'], 1).'1">
+									 <h4 class="upper-tab-title">'.$upper_tab_single['title'].' </h4>
+									 <p class="upper-tab-content">'.$upper_tab_single['tabs_foundation_content'].'</p>
 									 </div>';
 								}
 							}
