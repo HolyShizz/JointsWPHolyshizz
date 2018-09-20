@@ -592,12 +592,65 @@ header {
 		line-height: 24px;
 	}
 }
+
 .personal-cabinet-text {
 	color: whitesmoke;
 }
+
 .orbit-bullets {
 	p {
 		color: whitesmoke;
 		margin: 0;
+	}
+}
+
+.parallax {
+	min-height: 700px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.course-select {
+	width: 85%;
+	border-radius: 13px;
+	margin: 0 auto;
+	padding: 60px 0;
+	background-color: #232323;
+
+	.tabs, .tabs-content {
+		background-color: transparent;
+		color: whitesmoke;
+		margin: 5px;
+		border: none;
+	}
+	.tabs-content {
+		height: 350px;
+	}
+
+	.tabs+.is-active {
+		background-color: #fe609f;
+		box-shadow: 0 5px 33.6px 1.4px rgba(254, 96, 159, .29);
+		text-shadow: #000 0 3px 4px;
+	}
+
+	.tabs-title {
+		border: 1px solid #3d3d3d; 
+		width: 27%;
+		border-radius: 5px;
+		a {
+		text-align: center;
+		background-color: transparent;
+		color: whitesmoke;
+		font-size: 15px;
+		font-weight: 500;
+		padding-bottom: 22px;
+		
+	}
+	}
+	.tabs-title a:focus {
+		background-color: #fe609f;
+		box-shadow: 0 5px 33.6px 1.4px rgba(254, 96, 159, .29);
 	}
 }

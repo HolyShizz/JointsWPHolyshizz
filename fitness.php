@@ -129,11 +129,11 @@ get_header(); ?>
 					<div class="grid-x align-justify padding-x">
 
 						<?php 
-							$advantages_item = ot_get_option('card_advantages_4_6', array() );
+							$advantages_items = ot_get_option('card_advantages_4_6', array() );
 		
-								if ( !empty ($advantages_item)) {
+								if ( !empty ($advantages_items)) {
 								
-								foreach ($advantages_item as $advantages_item_single) {
+								foreach ($advantages_items as $advantages_item_single) {
 									echo  '<div class="cell large-3 medium-4 small-12">
 										<h1>'.$advantages_item_single['card_advantages_4_6_number'].'</h1>
 										<h4>'.$advantages_item_single['title'].'</h4>
@@ -146,9 +146,56 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
-		</main> <!-- end #main -->
+			<div class="parallax" style="background-image:url(<?php echo ot_get_option('parallax_images_1')?>);">
 
-	</div> <!-- end #inner-content -->
+			</div>
+
+
+			<div class="course-select">
+				<div class="grid-container">
+					<div class="grid-x">
+						<?php 
+						echo '<div class="cell large-9">
+							<ul class="tabs menu align-justify" data-tabs id="upper-tabs">';
+						$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
+						if (!empty ($upper_tabs) ) {
+
+							foreach ($upper_tabs as $upper_tab_single) {
+
+								echo '<li class="tabs-title"><a href="'.$upper_tab_single['tabs_foundation_id'].'"> '.$upper_tab_single['title'].' </a></li>';
+
+							}
+						};
+						echo '</div>';
+						?>
+
+					
+					
+
+						<?php 
+						echo '<div class="cell large-3">
+							<div class="tabs-content" data-tabs-content="upper-tabs">';
+						$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
+						if (!empty ($upper_tabs) ) {
+
+							foreach ($upper_tabs as $upper_tab_single) {
+
+								echo '<div class="tabs-panel" id="'.$upper_tab_single['tabs_foundation_id'] = substr($upper_tab_single['tabs_foundation_id'], 1).'">
+								<p class="upper-tab-title">'.$upper_tab_single['title'].' </p>
+								<p class="upper-tab-content">'.$upper_tab_single['tabs_foundation_content'].'</p></div>';
+
+							}
+						};
+
+						?>
+
+					
+				</div>
+			</div>
+	</div>
+	</main> <!-- end #main -->
+
+</div> <!-- end #inner-content -->
 
 </div> <!-- end #content -->
 
