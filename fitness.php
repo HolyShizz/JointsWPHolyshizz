@@ -150,13 +150,13 @@ get_header(); ?>
 
 			</div>
 
+			<div class="block-swiper">
+				<div class="course-select">
 
-			<div class="course-select">
-				<div class="grid-container">
 					<div class="grid-x">
 						<?php 
-						echo '<div class="cell large-9">
-							<ul class="tabs menu align-justify" data-tabs id="upper-tabs">';
+						echo '<div class="cell large-9 small-12">
+							<ul class="accordion menu align-justify" data-responsive-accordion-tabs="accordion large-tabs medium-accordion" id="upper-tabs">';
 						$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
 						if (!empty ($upper_tabs) ) {
 
@@ -169,11 +169,11 @@ get_header(); ?>
 						echo '</div>';
 						?>
 
-					
-					
+
+
 
 						<?php 
-						echo '<div class="cell large-3">
+						echo '<div class="cell large-3 small-12">
 							<div class="tabs-content" data-tabs-content="upper-tabs">';
 						$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
 						if (!empty ($upper_tabs) ) {
@@ -189,13 +189,13 @@ get_header(); ?>
 
 						?>
 
-					
+
+					</div>
 				</div>
 			</div>
-	</div>
-	</main> <!-- end #main -->
+		</main> <!-- end #main -->
 
-</div> <!-- end #inner-content -->
+	</div> <!-- end #inner-content -->
 
 </div> <!-- end #content -->
 
