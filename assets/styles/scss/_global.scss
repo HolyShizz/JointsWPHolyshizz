@@ -3,6 +3,10 @@
 Stylesheet: Global Stylesheet
 
 *************************************************/
+/*********************
+Media queries
+*********************/
+
 
 /*********************
 POSTS & CONTENT STYLES
@@ -618,7 +622,18 @@ header {
 	margin: 0 auto;
 	padding: 60px 4px;
 	background-color: #232323;
-
+	p.card-text {
+		font-size: 12px;
+	}
+	h4.card-text {
+		padding: 0 0 10px 0 ;
+		color: #fe609f;
+		height: 115px;
+	}
+	.menu-tabs {
+		display: flex;
+		justify-items: stretch;
+	}
 	.tabs,
 	.tabs-content,
 	.accordion-content {
@@ -643,7 +658,7 @@ header {
 	}
 
 	.tabs-title {
-		width: 27%;
+		width: 33%;
 	}
 
 	.tabs-title {
@@ -683,3 +698,4 @@ header {
 		}
 	}
 }
+

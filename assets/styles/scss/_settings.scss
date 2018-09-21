@@ -61,7 +61,7 @@
 //  56. Xy Grid
 
 @import '../../../node_modules/foundation-sites/scss/util/util';
-
+@import '../../fonts/fonts.scss';
 // 1. Global
 // ---------
 
@@ -82,7 +82,7 @@ $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: Diaria Sans Pro, sans-serif, Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -325,13 +325,13 @@ $callout-link-tint: 30%;
 // 14. Card
 // --------
 
-$card-background: $white;
-$card-font-color: $body-font-color;
-$card-divider-background: $light-gray;
+$card-background: transparent;
+$card-font-color: $light-gray;
+$card-divider-background: transparent;
 $card-border: 1px solid $light-gray;
 $card-shadow: none;
-$card-border-radius: $global-radius;
-$card-padding: $global-padding;
+$card-border-radius: 13px;
+$card-padding: 7px;
 $card-margin-bottom: $global-margin;
 
 // 15. Close Button
@@ -801,7 +801,7 @@ $tab-item-font-size: rem-calc(12);
 $tab-item-background-hover: $white;
 $tab-item-padding: 1.25rem 1.5rem;
 $tab-expand-max: 6;
-$tab-content-background: $white;
+$tab-content-background: transparent;
 $tab-content-border: $light-gray;
 $tab-content-color: $body-font-color;
 $tab-content-padding: 1rem;
