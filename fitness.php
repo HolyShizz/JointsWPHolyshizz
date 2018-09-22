@@ -154,8 +154,13 @@ get_header(); ?>
 
 				<div class="course-select">
 
-					<div class="grid-x grid-padding-x show-for-large">
+					<div class="grid-x grid-padding-x show-for-medium">
 						<div class="cell large-8">
+							<h3>
+								<?php 
+								echo ot_get_option('coursec_title');
+								?>
+							</h3>
 							<ul class="tabs menu-tabs" data-tabs="tabs" id="upper-tabs">
 								<?php 
 								$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
@@ -167,142 +172,57 @@ get_header(); ?>
 
 								}
 							}
-						?>
+							?>
 							</ul>
+
 							<div class="grid-container full">
-								<div class="grid-x small-up-2 grid-margin-x medium-up-4">
-									<div class="cell ">
-										<div class="card">
-											<div class="card-divider card-height">
-												<h6>Курс с фитнес-резинками</h6>
-											</div>
-											<div class="card-section card-active card-on">
 
-												<p class="card-text"> Курс подойдет как новичку, так и профессионалу за счет вариации натяжения резинок.
-													Данными силовыми
-													тренировками можно заниматься дома, в зале или на природе - в любом удобном месте.
-													Курс предполагает наличие исключительно фитнес-резинок, длинного эспандера и коврика.
-													Уровень сложности: низкий/средний, от 0 до 1 года </p>
-													<p class="card-text">Уровень сложности: низкий/средний, от 0 до 1 года</p>
-											</div>
-										</div>
-									</div>
-									<div class="cell ">
-										<div class="card">
-											<div class="card-divider card-height">
-												<h6>Курс с фитнес-резинками</h6>
-											</div>
-											<div class="card-section card-active card-on">
+								<h3>
+									<?php 
+								echo ot_get_option('coursec_step_2_title');
+								?>
+								</h3>
 
-												<p class="card-text"> Курс подойдет как новичку, так и профессионалу за счет вариации натяжения резинок.
-													Данными силовыми
-													тренировками можно заниматься дома, в зале или на природе - в любом удобном месте.
-													Курс предполагает наличие исключительно фитнес-резинок, длинного эспандера и коврика.
-													Уровень сложности: низкий/средний, от 0 до 1 года </p>
-													<p class="card-text">Уровень сложности: низкий/средний, от 0 до 1 года</p>
-											</div>
-										</div>
-									</div>
-									<div class="cell ">
-										<div class="card">
-											<div class="card-divider card-height">
-												<h6>Курс с фитнес-резинками</h6>
-											</div>
-											<div class="card-section card-active card-on">
+								
+								<div class="grid-x small-up-2 grid-margin-x large-up-3">
 
-												<p class="card-text"> Курс подойдет как новичку, так и профессионалу за счет вариации натяжения резинок.
-													Данными силовыми
-													тренировками можно заниматься дома, в зале или на природе - в любом удобном месте.
-													Курс предполагает наличие исключительно фитнес-резинок, длинного эспандера и коврика.
-													Уровень сложности: низкий/средний, от 0 до 1 года </p>
-													<p class="card-text">Уровень сложности: низкий/средний, от 0 до 1 года</p>
-											</div>
-										</div>
-									</div>
-									<div class="cell ">
-										<div class="card">
-											<div class="card-divider card-height">
-												<h6>Курс с фитнес-резинками</h6>
-											</div>
-											<div class="card-section card-active card-on">
+									<?php 
+								$coursec_card = ot_get_option('coursec_step_2_card', array());
 
-												<p class="card-text"> Курс подойдет как новичку, так и профессионалу за счет вариации натяжения резинок.
-													Данными силовыми
-													тренировками можно заниматься дома, в зале или на природе - в любом удобном месте.
-													Курс предполагает наличие исключительно фитнес-резинок, длинного эспандера и коврика.
-													Уровень сложности: низкий/средний, от 0 до 1 года </p>
-													<p class="card-text">Уровень сложности: низкий/средний, от 0 до 1 года</p>
-											</div>
-										</div>
-									</div>
-									<div class="cell ">
-										<div class="card">
-											<div class="card-divider card-height">
-												<h6>Курс с фитнес-резинками</h6>
-											</div>
-											<div class="card-section card-active card-on">
+								if (!empty ($coursec_card) ) {
 
-												<p class="card-text"> Курс подойдет как новичку, так и профессионалу за счет вариации натяжения резинок.
-													Данными силовыми
-													тренировками можно заниматься дома, в зале или на природе - в любом удобном месте.
-													Курс предполагает наличие исключительно фитнес-резинок, длинного эспандера и коврика.
-													Уровень сложности: низкий/средний, от 0 до 1 года </p>
-													<p class="card-text">Уровень сложности: низкий/средний, от 0 до 1 года</p>
-											</div>
-										</div>
-									</div>
-									<div class="cell ">
-										<div class="card">
-											<div class="card-divider card-height">
-												<h6>Курс с фитнес-резинками</h6>
-											</div>
-											<div class="card-section card-active card-on">
+								foreach ($coursec_card as $coursec_card_single) {
 
-												<p class="card-text"> Курс подойдет как новичку, так и профессионалу за счет вариации натяжения резинок.
-													Данными силовыми
-													тренировками можно заниматься дома, в зале или на природе - в любом удобном месте.
-													Курс предполагает наличие исключительно фитнес-резинок, длинного эспандера и коврика.
-													Уровень сложности: низкий/средний, от 0 до 1 года </p>
-													<p class="card-text">Уровень сложности: низкий/средний, от 0 до 1 года</p>
-											</div>
-										</div>
-									</div>
-									<div class="cell ">
-										<div class="card">
-											<div class="card-divider card-height">
-												<h6>Курс с фитнес-резинками</h6>
-											</div>
-											<div class="card-section card-active card-on">
+									echo '<div class="cell">
+											<div class="card">
+												<div class="card-divider card-height">
+												<h6>'.$coursec_card_single['title'].'</h6>
+												</div>
+												<div class="card-section">
+												<p class="card-text">
+												'.$coursec_card_single['coursec_step_2_card_purpose'].'
+												</p>
+												<h6>'.$coursec_card_single['coursec_step_2_card_included_title'].'</h6>
 
-												<p class="card-text"> Курс подойдет как новичку, так и профессионалу за счет вариации натяжения резинок.
-													Данными силовыми
-													тренировками можно заниматься дома, в зале или на природе - в любом удобном месте.
-													Курс предполагает наличие исключительно фитнес-резинок, длинного эспандера и коврика.
-													Уровень сложности: низкий/средний, от 0 до 1 года </p>
-													<p class="card-text">Уровень сложности: низкий/средний, от 0 до 1 года</p>
-											</div>
-										</div>
-									</div>
-									<div class="cell ">
-										<div class="card">
-											<div class="card-divider card-height">
-												<h6>Курс с фитнес-резинками</h6>
-											</div>
-											<div class="card-section card-active card-on">
+												<p class="card-text">'.$coursec_card_single['coursec_step_2_card_included_text'].'</p>
 
-												<p class="card-text"> Курс подойдет как новичку, так и профессионалу за счет вариации натяжения резинок.
-													Данными силовыми
-													тренировками можно заниматься дома, в зале или на природе - в любом удобном месте.
-													Курс предполагает наличие исключительно фитнес-резинок, длинного эспандера и коврика.
-													Уровень сложности: низкий/средний, от 0 до 1 года </p>
-													<p class="card-text">Уровень сложности: низкий/средний, от 0 до 1 года</p>
-											</div>
-										</div>
-									</div>
+												<h6>'.$coursec_card_single['coursec_step_2_card_price_title'].'</h6>
 
-									
+												<p class="card-text">'.$coursec_card_single['coursec_step_2_card_price_number'].'</p>
+
+												</div>
+
+											</div>
+
+										</div>';
+								}
+							}
+							?>
+
 								</div>
+
 							</div>
+
 						</div>
 
 
@@ -337,7 +257,7 @@ get_header(); ?>
 
 
 
-					<div class="grid-x show-for-small hide-for-large">
+					<div class="grid-x show-for-small hide-for-large hide-for-medium">
 						<?php 
 							echo '<div class="cell ">
 								<ul class="tabs" data-responsive-accordion-tabs="accordion" id="upper-tabs-for-med">';

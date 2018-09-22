@@ -622,10 +622,11 @@ header {
 	margin: 0 auto;
 	padding: 60px 4px;
 	background-color: #232323;
+	color: whitesmoke;
 	p.card-text {
-		font-size: 12px;
+		font-size: 11px;
 	}
-	h4.card-text {
+	h4,h6.card-text {
 		padding: 0 0 10px 0 ;
 		color: #fe609f;
 		height: 115px;
@@ -639,7 +640,7 @@ header {
 	.accordion-content {
 		background-color: transparent;
 		color: whitesmoke;
-		margin: 5px;
+		margin-bottom: 15px;
 		border: none;
 	}
 
