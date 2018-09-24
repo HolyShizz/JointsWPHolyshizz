@@ -623,8 +623,11 @@ header {
 	padding: 60px 4px;
 	background-color: #232323;
 	color: whitesmoke;
+	.card-height {
+		height: 300px;
+	}
 	p.card-text {
-		font-size: 11px;
+		font-size: 12px;
 	}
 	h4,h6.card-text {
 		padding: 0 0 10px 0 ;

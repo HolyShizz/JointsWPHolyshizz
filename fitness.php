@@ -183,8 +183,8 @@ get_header(); ?>
 								?>
 								</h3>
 
-								
-								<div class="grid-x small-up-2 grid-margin-x large-up-3">
+
+								<div class="grid-x small-up-3 grid-margin-x large-up-4">
 
 									<?php 
 								$coursec_card = ot_get_option('coursec_step_2_card', array());
@@ -194,26 +194,16 @@ get_header(); ?>
 								foreach ($coursec_card as $coursec_card_single) {
 
 									echo '<div class="cell">
-											<div class="card">
-												<div class="card-divider card-height">
-												<h6>'.$coursec_card_single['title'].'</h6>
+											<div class="card card-height">
+												<div class="card-divider">
+												<h6 style="color:#fe609f; height: 50px;">'.$coursec_card_single['title'].'</h6>
 												</div>
 												<div class="card-section">
 												<p class="card-text">
 												'.$coursec_card_single['coursec_step_2_card_purpose'].'
 												</p>
-												<h6>'.$coursec_card_single['coursec_step_2_card_included_title'].'</h6>
-
-												<p class="card-text">'.$coursec_card_single['coursec_step_2_card_included_text'].'</p>
-
-												<h6>'.$coursec_card_single['coursec_step_2_card_price_title'].'</h6>
-
-												<p class="card-text">'.$coursec_card_single['coursec_step_2_card_price_number'].'</p>
-
 												</div>
-
 											</div>
-
 										</div>';
 								}
 							}
@@ -241,6 +231,7 @@ get_header(); ?>
 									 <hr>
 									 <h4 class="upper-tab-title" style="color:#fe609f">'.$upper_tab_single['tab_foundation_content_title'].' </h4>
 									 <p class="upper-tab-content">'.$upper_tab_single['tab_foundation_content'].'</p>
+									 <hr>
 									 </div>';
 								}
 							}
