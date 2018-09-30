@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Fitness
+Template Name: FitnessTest
 */
 
 get_header(); ?>
@@ -161,14 +161,14 @@ get_header(); ?>
 								echo ot_get_option('coursec_title');
 								?>
 							</h3>
-							<ul class="tabs menu-tabs" data-tabs="tabs" id="upper-tabs">
+							<ul class="tabs " data-tabs="tabs" id="upper-tabs">
 								<?php 
 								$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
 								if (!empty ($upper_tabs) ) {
 
 								foreach ($upper_tabs as $upper_tab_single) {
 
-									echo '<li class="tabs-title"><a href="'.$upper_tab_single['tabs_foundation_id'].'"> '.$upper_tab_single['title'].' </a></li>';
+									echo '<li class="tabs-title"><a href="'.$upper_tab_single['coursec_tabs_foundation_1st_section'].'"> '.$upper_tab_single['title'].' </a></li>';
 
 								}
 							}
@@ -184,48 +184,82 @@ get_header(); ?>
 								</h3>
 
 
-								<div class="tabs menu-tabs">
+								<div class="grid-x small-up-3 grid-margin-x large-up-4">
+									<ul class="tabs menu-tabs" data-tabs="tabs" id="coursec-card-1-4">
+										<?php 
 
-									<?php 
-								$coursec_card = ot_get_option('coursec_step_2_card', array());
+								$coursec_step_2_card_int = ot_get_option('coursec_step_2_card', array());
 
-								if (!empty ($coursec_card) ) {
+								if (!empty ($coursec_step_2_card_int) ) {
 
-								foreach ($coursec_card as $coursec_card_single) {
+								foreach ($coursec_step_2_card_int as $coursec_step_2_card_single) {
 
-									echo '<div class="cell">
-											<div class="card card-height">
-												<div class="card-divider">
-												<h6 style="color:#fe609f; height: 50px;">'.$coursec_card_single['title'].'</h6>
-												</div>
-												<div class="card-section">
-												<p class="card-text">
-												'.$coursec_card_single['coursec_step_2_card_purpose'].'
-												</p>
-												</div>
-											</div>
-										</div>';
+									echo '
+											
+												<li class="tabs-title"><a href="'.$coursec_step_2_card_single['coursec_tabs_foundation_2nd_section'].'">'.$coursec_step_2_card_single['title'].'<br><hr>
+												'.$coursec_step_2_card_single['coursec_step_2_card_purpose'].'</a>
+												</li>
+												
+												
+												
+												
+												
+											
+										';
 								}
 							}
 							?>
-
+									</ul>
 								</div>
-
+								<h3>
+									<?php 
+									echo ot_get_option('coursec_step_3_title');
+									?>
+								</h3>
+								<div class="grid-x small-up-3 grid-margin-x large-up-4">
+									<ul class="tabs menu-tabs" data-tabs="tabs" id="coursec-card-1-4">
+										<?php 
+	
+									$coursec_step_2_card_int = ot_get_option('coursec_step_2_card', array());
+	
+									if (!empty ($coursec_step_2_card_int) ) {
+	
+									foreach ($coursec_step_2_card_int as $coursec_step_2_card_single) {
+	
+										echo '
+												
+													<li class="tabs-title"><a href="'.$coursec_step_2_card_single['coursec_tabs_foundation_2nd_section'].'">'.$coursec_step_2_card_single['title'].'<br><hr>
+													'.$coursec_step_2_card_single['coursec_step_2_card_purpose'].'</a>
+													</li>
+													
+													
+													
+													
+													
+												
+											';
+									}
+								}
+								?>
+									</ul>
+								</div>
 							</div>
 
 						</div>
 
 
 						<div class="cell large-3 ">
+
 							<div class="tabs-content" data-tabs-content="upper-tabs">
-								<?php 
+								<div class="top-tab-content">
+									<?php 
 							
 							$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
 							if (!empty ($upper_tabs) ) {
 
 								foreach ($upper_tabs as $upper_tab_single) {
 
-								echo '<div class="tabs-panel upper-tabs" id="'.$upper_tab_single['tabs_foundation_id'] = substr($upper_tab_single['tabs_foundation_id'], 1).'">
+								echo '<div class="tabs-panel upper-tabs" id="'.$upper_tab_single['coursec_tabs_foundation_1st_section'] = substr($upper_tab_single['coursec_tabs_foundation_1st_section'], 1).'">
 									 <h4 class="upper-tab-title" style="color:#fe609f">'.$upper_tab_single['title'].' </h4>
 									 <p class="upper-tab-content">'.$upper_tab_single['tabs_foundation_title_append'].'</p>
 									 <hr>
@@ -237,55 +271,33 @@ get_header(); ?>
 							}
 							
 						?>
+								</div>
+
+								<div class="bot-tab-content">
+									<div class="tabs-content" data-tabs-content="coursec-card-1-4">
+										<?php 
+
+							$coursec_step_2_card_int = ot_get_option('coursec_step_2_card', array());
+
+							if (!empty ($coursec_step_2_card_int) ) {
+
+							foreach ($coursec_step_2_card_int as $coursec_step_2_card_single) {
+
+								echo '
+								<div class="tabs-panel upper-tabs" id="'.$coursec_step_2_card_single['coursec_tabs_foundation_2nd_section'] = substr($coursec_step_2_card_single['coursec_tabs_foundation_2nd_section'], 1).'">
+									<h4 style="color:#fe609f">'.$coursec_step_2_card_single['coursec_step_2_card_price_title'].'</h4>
+									<h3 style="color:#fe609f">'.$coursec_step_2_card_single['coursec_step_2_card_price_number'].'</h3>
+								</div>	
+									';
+							}
+						}
+						?>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-
-
-
-
-
-
-
-
-					<div class="grid-x show-for-small hide-for-large hide-for-medium">
-						<?php 
-							echo '<div class="cell ">
-								<ul class="tabs" data-responsive-accordion-tabs="accordion" id="upper-tabs-for-med">';
-								$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
-								if (!empty ($upper_tabs) ) {
-
-								foreach ($upper_tabs as $upper_tab_single) {
-
-									echo '<li class="tabs-title"><a href="'.$upper_tab_single['tabs_foundation_id'].'1"> '.$upper_tab_single['title'].' </a></li>';
-
-								}
-							}
-							echo 
-							'</ul></div>';
-							
-						?>
-
-						<?php 
-							echo '<div class="cell">
-								<div class="tabs-content" data-tabs-content="upper-tabs-for-med">';
-							$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
-							if (!empty ($upper_tabs) ) {
-
-								foreach ($upper_tabs as $upper_tab_single) {
-
-								echo '<div class="tabs-panel upper-tabs-for-med" id="'.$upper_tab_single['tabs_foundation_id'] = substr($upper_tab_single['tabs_foundation_id'], 1).'1">
-									 <h4 class="upper-tab-title">'.$upper_tab_single['title'].' </h4>
-									 <p class="upper-tab-content">'.$upper_tab_single['tabs_foundation_content'].'</p>
-									 </div>';
-								}
-							}
-							echo '</div>
-							</div>';
-						?>
-					</div>
 				</div>
-			</div>
 		</main> <!-- end #main -->
 
 	</div> <!-- end #inner-content -->
