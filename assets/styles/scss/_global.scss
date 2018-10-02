@@ -24,7 +24,7 @@ POSTS & CONTENT STYLES
 .byline {
 	color: #999;
 
-	time {}
+
 }
 
 // Entry content  
@@ -623,88 +623,82 @@ header {
 	padding: 60px 4px;
 	background-color: #232323;
 	color: whitesmoke;
-	.card-height {
-		height: 300px;
-	}
-	p.card-text {
-		font-size: 12px;
-	}
-	h4,h6.card-text {
-		padding: 0 0 10px 0 ;
-		color: #fe609f;
-		height: 45px;
-	}
-	.menu-tabs {
+
+	.button {
+		border: 1px solid whitesmoke;
 		display: flex;
-		justify-items: stretch;
-	}
-	.tabs,
-	.tabs-content,
-	.accordion-content {
-		background-color: transparent;
-		color: whitesmoke;
-		margin-bottom: 15px;
-		border: none;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
 	}
 
-	.tabs-content {
-		height: 350px;
-	}
+	#coursec-btn-middle {
+		.card-height {
+			height: 300px;
+		}
 
-	
-
-	.tabs+.is-active {
-		a {
-			background-color: #fe609f;
-			box-shadow: 0 5px 33.6px 1.4px rgba(254, 96, 159, .29);
-			text-shadow: #000 0 3px 4px;
+		p.card-text {
+			font-size: 12px;
 		}
 	}
 
-	.tabs-title {
-		width: 33%;
-	}
-
-	.tabs-title {
-		border: 1px solid #3d3d3d;
-		border-radius: 5px;
-
-		a {
-			text-align: center;
-			background-color: transparent;
-			color: whitesmoke;
-			font-size: 15px;
-			font-weight: 500;
-			padding-bottom: 22px;
-
-		}
-	}
-
-	.tabs-title a:focus {
-		background-color: #fe609f;
-		box-shadow: 0 5px 33.6px 1.4px rgba(254, 96, 159, .29);
-	}
 }
-.accordion {
-	background-color: transparent;
-	.accordion-title:focus,
-	.accordion-title:hover {
-			background-color: #fe609f;
-			box-shadow: 0 5px 33.6px 1.4px rgba(254, 96, 159, .29);
-			text-shadow: #000 0 3px 4px;
-			color: whitesmoke;
-	}
-	.accordion-title + .is-active {
-		a {
-			background-color: #fe609f;
-			box-shadow: 0 5px 33.6px 1.4px rgba(254, 96, 159, .29);
-			text-shadow: #000 0 3px 4px;
-		}
-	}
-}
+
 .top-tab-content {
 	height: 600px;
 }
+
 .bot-tab-content {
 	height: 300px;
 }
+
+.filterDiv1{
+	display: none;
+}
+  .filterDiv, .filterDiv1 {
+	background-color: transparent;
+	color: #fe609f;
+	width: 200px;
+	line-height: 100px;
+	text-align: center;
+	margin: 2px;
+  }
+  
+  .show, .sideshow {
+	background-color: #666;
+	display: block;
+  }
+  .fifty {
+	width: 50%;
+  }
+  .thirty {
+	width: 30%;
+  }
+  .container {
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 20px;
+	overflow: hidden;
+  }
+  #myBtnContainer {
+	display: flex;
+	justify-content: space-between;
+  }
+  /* Style the buttons */
+  .btn-top {
+	border: none;
+	outline: none;
+	padding: 12px 16px;
+	background-color: #f1f1f1;
+	cursor: pointer;
+  }
+  
+  .btn-top:hover, .btn-middle.show:hover {
+	background-color: #ddd;
+  }
+  
+  .btn-top.active, .btn-middle.active1 {
+	background-color: #fe609f;
+	color: white;
+  }
+  

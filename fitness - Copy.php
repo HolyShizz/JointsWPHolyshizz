@@ -10,145 +10,7 @@ get_header(); ?>
 	<div class="inner-content ">
 
 		<main class="main small-12 medium-12 large-12 cell" role="main">
-			<div class="block-quote">
-				<div class="grid-container fluid">
-					<div class="grid-x align-center">
-						<div class="cell small-2 medium-2 large-1"><img src="<?php echo ot_get_option('image_inside_block_quote'); ?>"
-							 alt=""></div>
-						<div class="cell small-10 medium-8 large-4">
-							<?php echo ot_get_option('text_inside_block_quote'); ?>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="block-swiper container-fluid">
-				<div class="orbit" role="region" aria-label="Fitness-slider" data-orbit>
-					<?php 
-					$swiper_item = ot_get_option('swiper', array() );
-
-						if (!empty ($swiper_item)) {
-						echo  '<ul class="orbit-container">';
-						foreach($swiper_item as $swiper_item_single) {
-						echo '<li class="orbit-slide">	
-						
-						<div class="content-inside-slider" style="background-image: url('.$swiper_item_single['swiper_image'].')" >
-						<div class="grid-container full">
-							<div class="grid-x align-right" style="height: 100%;">
-								<div class="cell large-6 align-self-middle">
-									<div class="text-content-inside-slider"><h3>'.$swiper_item_single['title'].' </h3><p>'.$swiper_item_single['text_inside_swiper'].'</p></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						</li>';
-						}
-						echo '</ul>';
-					}
-
-				?>
-				</div>
-			</div>
-			<div class="advantages">
-				<div class="grid-container">
-					<div class="advantages-title">
-						<h4>
-							<?php
-						echo ot_get_option('title_advantages');
-						?>
-						</h4>
-					</div>
-					<div class="grid-x align-justify padding-x">
-
-						<?php 
-							$advantages_item = ot_get_option('card_advantages_1_3', array() );
-		
-								if ( !empty ($advantages_item)) {
-								
-								foreach ($advantages_item as $advantages_item_single) {
-									echo  '<div class="cell large-3 medium-4 small-12">
-										<h1>'.$advantages_item_single['card_advantages_1_3_item_number'].'</h1>
-										<h4>'.$advantages_item_single['title'].'</h4>
-										<p>'.$advantages_item_single['card_advantages_item_1_3_paragraph'].'</p>
-									</div>';
-								}
-								
-							}
-						?>
-					</div>
-				</div>
-			</div>
-			<div class="block-swiper">
-				<div class="grid-container fluid">
-					<div class="grid-x align-justify align-middle">
-
-						<div class="cell small-12 medium-12 large-6">
-							<div class="orbit" role="region" aria-label="Personal-cabinet-examples" data-orbit>
-								<?php 
-									$personal_cabinet_slider = ot_get_option('personal_cabinet_slider', array() );
-									if (!empty ($personal_cabinet_slider)) {
-									echo  '<ul class="orbit-container">';
-									foreach($personal_cabinet_slider as $personal_cabinet_slider_item) {
-									echo '<li class="orbit-slide">	
-											<img src="'.$personal_cabinet_slider_item['personal_cabinet_slider_tab_image'].'">
-									</li>';
-									}
-									echo '</ul> 
-									<nav class="orbit-bullets">
-  										<button class="is-active" data-slide="0"><p>Тренировки</p></button>
-										<button data-slide="1"><p>Питание</p></button>
-										<button data-slide="2"><p>Отчеты</p></button>
-									</nav>
-								  ';
-
-								}
-
-								?>
-							</div>
-						</div>
-
-						<div class="cell small-12 medium-12 large-5">
-							<div class="personal-cabinet-text">
-								<?php 
-								echo ot_get_option('personal_cabinet_title_with_paragraph');
-								?>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-			<div class="advantages">
-				<div class="grid-container">
-					<div class="advantages-title">
-						<h4>
-							<?php
-						echo ot_get_option('title_advantages');
-						?>
-						</h4>
-					</div>
-					<div class="grid-x align-justify padding-x">
-
-						<?php 
-							$advantages_items = ot_get_option('card_advantages_4_6', array() );
-		
-								if ( !empty ($advantages_items)) {
-								
-								foreach ($advantages_items as $advantages_item_single) {
-									echo  '<div class="cell large-3 medium-4 small-12">
-										<h1>'.$advantages_item_single['card_advantages_4_6_number'].'</h1>
-										<h4>'.$advantages_item_single['title'].'</h4>
-										<p>'.$advantages_item_single['card_advantages_4_5_paragraph'].'</p>
-									</div>';
-								}
-								
-							}
-						?>
-					</div>
-				</div>
-			</div>
-			<div class="parallax" style="background-image:url(<?php echo ot_get_option('parallax_images_1')?>);">
-
-			</div>
+			
 
 			<div class="block-swiper">
 
@@ -161,19 +23,21 @@ get_header(); ?>
 								echo ot_get_option('coursec_title');
 								?>
 							</h3>
-							<ul class="tabs " data-tabs="tabs" id="upper-tabs">
+							
 								<?php 
+								echo '<div class="expanded button-group">';
 								$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
 								if (!empty ($upper_tabs) ) {
 
 								foreach ($upper_tabs as $upper_tab_single) {
 
-									echo '<li class="tabs-title"><a href="'.$upper_tab_single['coursec_tabs_foundation_1st_section'].'"> '.$upper_tab_single['title'].' </a></li>';
+									echo '<button type="button" class="coursec-nav button secondary"><a href="'.$upper_tab_single['coursec_tabs_foundation_1st_section'].'"> '.$upper_tab_single['title'].' </a></button>';
 
 								}
 							}
+							echo '</div>';
 							?>
-							</ul>
+							
 
 							<div class="grid-container full">
 
@@ -184,8 +48,8 @@ get_header(); ?>
 								</h3>
 
 
-								<div class="grid-x small-up-3 grid-margin-x large-up-4">
-									<ul class="tabs menu-tabs" data-tabs="tabs" id="coursec-card-1-4">
+								<div id="coursec-btn-middle" class="grid-x small-up-3 grid-margin-x large-up-4">
+									
 										<?php 
 
 								$coursec_step_2_card_int = ot_get_option('coursec_step_2_card', array());
@@ -195,54 +59,26 @@ get_header(); ?>
 								foreach ($coursec_step_2_card_int as $coursec_step_2_card_single) {
 
 									echo '
+											<div class="cell">
+												
+												<button type="button" class="button secondary card-height"><h6>'.$coursec_step_2_card_single['title'].'</h6>
+													
+												<a>'.$coursec_step_2_card_single['coursec_step_2_card_purpose'].'</a>
+												</button>
 											
-												<li class="tabs-title"><a href="'.$coursec_step_2_card_single['coursec_tabs_foundation_2nd_section'].'">'.$coursec_step_2_card_single['title'].'<br><hr>
-												'.$coursec_step_2_card_single['coursec_step_2_card_purpose'].'</a>
-												</li>
-												
-												
-												
-												
-												
-											
+											</div>
 										';
 								}
 							}
 							?>
-									</ul>
+									
 								</div>
 								<h3>
 									<?php 
 									echo ot_get_option('coursec_step_3_title');
 									?>
 								</h3>
-								<div class="grid-x small-up-3 grid-margin-x large-up-4">
-									<ul class="tabs menu-tabs" data-tabs="tabs" id="coursec-card-1-4">
-										<?php 
-	
-									$coursec_step_2_card_int = ot_get_option('coursec_step_2_card', array());
-	
-									if (!empty ($coursec_step_2_card_int) ) {
-	
-									foreach ($coursec_step_2_card_int as $coursec_step_2_card_single) {
-	
-										echo '
-												
-													<li class="tabs-title"><a href="'.$coursec_step_2_card_single['coursec_tabs_foundation_2nd_section'].'">'.$coursec_step_2_card_single['title'].'<br><hr>
-													'.$coursec_step_2_card_single['coursec_step_2_card_purpose'].'</a>
-													</li>
-													
-													
-													
-													
-													
-												
-											';
-									}
-								}
-								?>
-									</ul>
-								</div>
+								
 							</div>
 
 						</div>
@@ -298,6 +134,36 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
+				<html>
+
+
+
+  
+  <div class="fifty">
+    <div id="myBtnContainer">
+      <button class="btn-top active" onclick="filterSelection('cheeks')">  Красивые ягодицы </button>
+      <button class="btn-top" onclick="filterSelection('excerptFirst','press')">  Идеальный пресс</button>
+      <button class="btn-top" onclick="filterSelection('excerptFirst','torse')">  Рельефное тело </button>
+
+    </div>
+
+    <div class="container" id="btnMiddleContainer">
+      <button onclick="filterSelectionSide('first')" class="filterDiv cheeks btn-middle"><a>Курс с фитнес-резинками</a></button>
+      <button onclick="filterSelectionSide('second')" class="filterDiv excerptFirst btn-middle"><a>Базовый</a></button>
+      <button onclick="filterSelectionSide('third')" class="filterDiv excerptFirst btn-middle"><a>Продвинутый</a></button>
+      <button onclick="filterSelectionSide('fourth')" class="filterDiv excerptFirst btn-middle"><a>Интенсивный</a></button>
+    </div>
+<button class="active1"></button>
+  </div>
+
+  <div class="thirty">
+    <div class="container">
+      <div class="filterDiv1 first"><a>111111</a></div>
+      <div class="filterDiv1 second"><a>2222222222</a></div>
+      <div class="filterDiv1 third"><a>К333333333333</a></div>
+      <div class="filterDiv1 fourth"><a>4444444444</a></div>
+    </div>
+
 		</main> <!-- end #main -->
 
 	</div> <!-- end #inner-content -->
