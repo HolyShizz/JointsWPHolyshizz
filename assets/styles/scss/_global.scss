@@ -488,6 +488,14 @@ PLUGIN STYLES
 	margin: 0;
 }
 
+/*********************
+Sticky title-bar
+*********************/
+
+header .title-bar {
+	z-index: 1;
+}
+
 // Hover underline block
 $menu-underline-from-center-bg: rgba(0, 0, 0, 0.6);
 $menu-underline-from-center-border-thickness: 0.125rem;
@@ -544,6 +552,9 @@ header {
 
 .block-quote {
 	padding: 60px 0;
+	h3 {
+		color: #000;
+	}
 }
 
 .block-swiper {
@@ -571,6 +582,8 @@ header {
 }
 
 .advantages {
+	padding: 50px 0;
+
 	.advantages-title {
 		text-align: left;
 		padding: 60px 0;
@@ -588,6 +601,7 @@ header {
 		font-size: 30px;
 		line-height: 40px;
 		padding-bottom: 37px;
+		color: black;
 	}
 
 	p {
@@ -652,53 +666,102 @@ header {
 	height: 300px;
 }
 
-.filterDiv1{
+.filterDiv1 {
 	display: none;
 }
-  .filterDiv, .filterDiv1 {
+
+.filterDiv,
+.filterDiv1 {
 	background-color: transparent;
 	color: #fe609f;
 	width: 200px;
 	line-height: 100px;
 	text-align: center;
 	margin: 2px;
-  }
-  
-  .show, .sideshow {
+}
+
+.show,
+.sideshow {
 	background-color: #666;
 	display: block;
-  }
-  .fifty {
+}
+
+.fifty {
 	width: 50%;
-  }
-  .thirty {
+}
+
+.thirty {
 	width: 30%;
-  }
-  .container {
+}
+
+.container {
 	display: flex;
 	justify-content: flex-start;
 	margin-top: 20px;
 	overflow: hidden;
-  }
-  #myBtnContainer {
+}
+
+#myBtnContainer {
 	display: flex;
 	justify-content: space-between;
-  }
-  /* Style the buttons */
-  .btn-top {
+}
+
+/* Style the buttons coursec section*/
+.btn-top {
 	border: none;
 	outline: none;
 	padding: 12px 16px;
 	background-color: #f1f1f1;
 	cursor: pointer;
-  }
-  
-  .btn-top:hover, .btn-middle.show:hover {
+}
+
+.btn-top:hover,
+.btn-middle.show:hover {
 	background-color: #ddd;
-  }
-  
-  .btn-top.active, .btn-middle.active1 {
+}
+
+.btn-top.active,
+.btn-middle.active1 {
 	background-color: #fe609f;
 	color: white;
-  }
-  
+}
+
+/* Testimonials section */
+
+.testimonials {
+	padding-top: 80px;
+	text-align: center;
+
+	
+
+	button {
+		margin-top: 25px;
+	}
+
+	.testimonial-container {
+		display: flex;
+		justify-content:space-around; 
+		width: 70%;
+		margin: auto;
+		background-color: #f7f7f7;
+		padding: 15px;
+		border-radius: 15px;
+		.testimonial-avatar {
+			width: 90%;
+		}
+	}
+		a {
+			margin: 20px 0;
+			color: black;
+			text-decoration: underline;
+			width: 100%;
+		}
+	.results {
+		width: 70%;
+		margin: auto;
+		padding: 50px 20px 30px 20px;
+		img {
+			overflow: hidden;
+		}
+	}
+}

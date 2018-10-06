@@ -48,7 +48,7 @@ get_header(); ?>
 				?>
 				</div>
 			</div>
-			<div class="advantages">
+			<div class="advantages" id="advantages" data-magellan-target="advantages">
 				<div class="grid-container">
 					<div class="advantages-title">
 						<h4>
@@ -146,146 +146,103 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
+
 			<div class="parallax" style="background-image:url(<?php echo ot_get_option('parallax_images_1')?>);">
 
 			</div>
 
-			<div class="block-swiper">
-
-				<div class="course-select">
-
-					<div class="grid-x grid-padding-x show-for-medium">
-						<div class="cell large-8">
-							<h3>
-								<?php 
-								echo ot_get_option('coursec_title');
-								?>
-							</h3>
-							<ul class="tabs menu-tabs" data-tabs="tabs" id="upper-tabs">
-								<?php 
-								$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
-								if (!empty ($upper_tabs) ) {
-
-								foreach ($upper_tabs as $upper_tab_single) {
-
-									echo '<li class="tabs-title"><a href="'.$upper_tab_single['tabs_foundation_id'].'"> '.$upper_tab_single['title'].' </a></li>';
-
-								}
-							}
-							?>
-							</ul>
-
-							<div class="grid-container full">
-
-								<h3>
-									<?php 
-								echo ot_get_option('coursec_step_2_title');
-								?>
-								</h3>
-
-
-								<div class="tabs menu-tabs">
-
-									<?php 
-								$coursec_card = ot_get_option('coursec_step_2_card', array());
-
-								if (!empty ($coursec_card) ) {
-
-								foreach ($coursec_card as $coursec_card_single) {
-
-									echo '<div class="cell">
-											<div class="card card-height">
-												<div class="card-divider">
-												<h6 style="color:#fe609f; height: 50px;">'.$coursec_card_single['title'].'</h6>
+			<div class="testimonials grid-container" id="testimonials" data-magellan-target="testimonials">
+				<?php 
+									echo '<div class="row">
+										<div class="columns">
+												<div class="orbit" role="region" aria-label="Favorite Text Ever" data-orbit>
+										<ul class="orbit-container">';
+									$testimonials = ot_get_option('testimonials_slider', array());
+									if (!empty ($testimonials) ) {
+		
+										foreach ($testimonials as $testimonials_single) {
+		
+										echo '	<li class="orbit-slide">
+												<div class="testimonial-container">
+												<div class="testimonial-avatar"><img src="'.$testimonials_single['avatar'].'" alt=""></div>
+												<div class="testimonial-short-text"><p>'.$testimonials_single['short_text'].'</p><a data-open="'.$testimonials_single['reveal_id'].'">Полный отзыв</a></div>
+												<p></p>
 												</div>
-												<div class="card-section">
-												<p class="card-text">
-												'.$coursec_card_single['coursec_step_2_card_purpose'].'
-												</p>
+												
+												  
+												
+												  <div class="reveal large" id="'.$testimonials_single['reveal_id'].'" data-reveal>
+													  <img src="'.$testimonials_single['testimonial_full'].'" alt="">
+													  <button class="close-button" data-close aria-label="Close modal" type="button">
+															<span aria-hidden="true">&times;</span>
+													  </button>
+												  </div>
+												
+												</li>	';
+										}
+									}
+									echo '</ul>
+										</div>
+									</div>
+								</div>';
+								?>
+
+								<?php 
+									echo '<div class="results">
+											<div class="row">
+												<div class="columns">
+													<div class="orbit" role="region" aria-label="Favorite Text Ever" data-orbit>
+														<ul class="orbit-container">';
+										$results = ot_get_option('result_slider', array());
+										if (!empty ($testimonials) ) {
+		
+										foreach ($results as $result_single) {
+		
+										echo '	<li class="orbit-slide">
+												<img class="orbit-image" src="'.$result_single['result_photo'].'" alt="">
+												
+												</li>	';
+										}
+
+									}
+												echo '</ul>
+													</div>
 												</div>
 											</div>
 										</div>';
+								?>
+			</div>
+			<div class="parallax" style="background-image:url(<?php echo ot_get_option('parallax_images_3')?>);">
+
+			</div>
+
+			<div class="FAQ block-swiper" id="FAQ" data-magellan-target="FAQ">
+				<div class="grid-container fluid ">
+					<h3>FAQ</h3>
+					<?php 
+							echo '<div class="row">
+								<div class="columns"></div>
+								<ul class="accordion" data-accordion data-allow-all-closed="true" data-multi-expand="true">';
+							$faq_accordion = ot_get_option('faq_list', array());
+							if (!empty ($faq_accordion) ) {
+
+								foreach ($faq_accordion as $faq_accordion_single) {
+
+								echo '	<li class="accordion-item" data-accordion-item>
+										<a href="#" class="accordion-title">'.$faq_accordion_single['question'].'</a>
+										<div class="accordion-content" data-tab-content >
+										  <p>'.$faq_accordion_single['answer'].'</p>
+										</div>
+										</li>	';
 								}
 							}
-							?>
-
+							echo '</ul>
 								</div>
-
-							</div>
-
-						</div>
-
-
-						<div class="cell large-3 ">
-							<div class="tabs-content" data-tabs-content="upper-tabs">
-								<?php 
-							
-							$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
-							if (!empty ($upper_tabs) ) {
-
-								foreach ($upper_tabs as $upper_tab_single) {
-
-								echo '<div class="tabs-panel upper-tabs" id="'.$upper_tab_single['tabs_foundation_id'] = substr($upper_tab_single['tabs_foundation_id'], 1).'">
-									 <h4 class="upper-tab-title" style="color:#fe609f">'.$upper_tab_single['title'].' </h4>
-									 <p class="upper-tab-content">'.$upper_tab_single['tabs_foundation_title_append'].'</p>
-									 <hr>
-									 <h4 class="upper-tab-title" style="color:#fe609f">'.$upper_tab_single['tab_foundation_content_title'].' </h4>
-									 <p class="upper-tab-content">'.$upper_tab_single['tab_foundation_content'].'</p>
-									 <hr>
-									 </div>';
-								}
-							}
-							
-						?>
-							</div>
-						</div>
-					</div>
-
-
-
-
-
-
-
-
-					<div class="grid-x show-for-small hide-for-large hide-for-medium">
-						<?php 
-							echo '<div class="cell ">
-								<ul class="tabs" data-responsive-accordion-tabs="accordion" id="upper-tabs-for-med">';
-								$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
-								if (!empty ($upper_tabs) ) {
-
-								foreach ($upper_tabs as $upper_tab_single) {
-
-									echo '<li class="tabs-title"><a href="'.$upper_tab_single['tabs_foundation_id'].'1"> '.$upper_tab_single['title'].' </a></li>';
-
-								}
-							}
-							echo 
-							'</ul></div>';
-							
-						?>
-
-						<?php 
-							echo '<div class="cell">
-								<div class="tabs-content" data-tabs-content="upper-tabs-for-med">';
-							$upper_tabs = ot_get_option('upper_tabs_nav_and_content', array());
-							if (!empty ($upper_tabs) ) {
-
-								foreach ($upper_tabs as $upper_tab_single) {
-
-								echo '<div class="tabs-panel upper-tabs-for-med" id="'.$upper_tab_single['tabs_foundation_id'] = substr($upper_tab_single['tabs_foundation_id'], 1).'1">
-									 <h4 class="upper-tab-title">'.$upper_tab_single['title'].' </h4>
-									 <p class="upper-tab-content">'.$upper_tab_single['tabs_foundation_content'].'</p>
-									 </div>';
-								}
-							}
-							echo '</div>
 							</div>';
 						?>
-					</div>
 				</div>
 			</div>
+
 		</main> <!-- end #main -->
 
 	</div> <!-- end #inner-content -->

@@ -24,7 +24,7 @@ function fitness_top_nav() {
     wp_nav_menu(array(
        'container' => false,                        // Remove nav container
        'menu_class' => 'menu align-center',       // Adding custom nav class
-       'items_wrap' => '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
+       'items_wrap' => '<ul id="%1$s" class="%2$s"  data-magellan>%3$s</ul>',
        'theme_location' => 'main-nav',        			// Where it's located in the theme
        'depth' => 5,                                   // Limit the depth of the nav
        'fallback_cb' => false,                         // Fallback function (see below)
@@ -44,7 +44,7 @@ function joints_off_canvas_nav() {
 	 wp_nav_menu(array(
         'container' => false,                           // Remove nav container
         'menu_class' => 'vertical menu accordion-menu',       			// Adding custom nav class
-        'items_wrap' => '<ul id="%1$s" class="%2$s" data-accordion-menu>%3$s</ul>',
+        'items_wrap' => '<ul id="%1$s" class="%2$s" data-magellan>%3$s</ul>',
         'theme_location' => 'main-nav',        			// Where it's located in the theme
         'depth' => 5,                                   // Limit the depth of the nav
         'fallback_cb' => false,                         // Fallback function (see below)
