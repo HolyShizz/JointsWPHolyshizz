@@ -34,7 +34,7 @@ get_header(); ?>
 						<div class="content-inside-slider" style="background-image: url('.$swiper_item_single['swiper_image'].')" >
 						<div class="grid-container full">
 							<div class="grid-x align-right" style="height: 100%;">
-								<div class="cell large-6 align-self-middle">
+								<div class="cell large-6 medium-12 align-self-middle">
 									<div class="text-content-inside-slider"><h3>'.$swiper_item_single['title'].' </h3><p>'.$swiper_item_single['text_inside_swiper'].'</p></div>
 									</div>
 								</div>
@@ -57,7 +57,7 @@ get_header(); ?>
 						?>
 						</h4>
 					</div>
-					<div class="grid-x align-justify padding-x">
+					<div class="grid-x align-justify grid-margin-x">
 
 						<?php 
 							$advantages_item = ot_get_option('card_advantages_1_3', array() );
@@ -65,7 +65,7 @@ get_header(); ?>
 								if ( !empty ($advantages_item)) {
 								
 								foreach ($advantages_item as $advantages_item_single) {
-									echo  '<div class="cell large-3 medium-4 small-12">
+									echo  '<div class="cell large-3 medium-8 small-12">
 										<h1>'.$advantages_item_single['card_advantages_1_3_item_number'].'</h1>
 										<h4>'.$advantages_item_single['title'].'</h4>
 										<p>'.$advantages_item_single['card_advantages_item_1_3_paragraph'].'</p>
