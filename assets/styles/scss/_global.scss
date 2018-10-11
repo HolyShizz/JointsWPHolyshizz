@@ -552,8 +552,18 @@ header {
 
 .block-quote {
 	padding: 60px 0;
-	h3 {
-		color: #000;
+
+	.quote-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		img {
+			height: 125px;
+		}
+		h3 {
+			color: #000;
+		}
+
 	}
 }
 
@@ -595,6 +605,7 @@ header {
 		font-size: 77px;
 		padding: 33px 0 23px 0;
 		font-weight: 200;
+
 	}
 
 	h4 {
@@ -602,6 +613,7 @@ header {
 		line-height: 40px;
 		padding-bottom: 37px;
 		color: black;
+		height: 80px;
 	}
 
 	p {
@@ -614,14 +626,19 @@ header {
 .personal-cabinet-text {
 	color: whitesmoke;
 }
-
+.block-swiper {
 .orbit-bullets {
+	button {
+		width: 30%;
+		height: 25px;
+		border-radius: 5px;
+	}
 	p {
 		color: whitesmoke;
 		margin: 0;
 	}
 }
-
+}
 .parallax {
 	min-height: 700px;
 	background-attachment: fixed;
@@ -630,7 +647,11 @@ header {
 	background-size: cover;
 }
 
-.course-select {
+.reveal-overlay {
+	color: whitesmoke;
+}
+
+.coursec {
 	width: 100%;
 	border-radius: 15px;
 	margin: 0 auto;
@@ -640,10 +661,13 @@ header {
 
 	.button {
 		border: 1px solid whitesmoke;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-		align-items: center;
+		color: whitesmoke;
+	}
+
+	.course-name {
+		color: whitesmoke;
+		height: 60px;
+		text-align: center;
 	}
 
 	#coursec-btn-middle {
@@ -732,7 +756,7 @@ header {
 	padding-top: 80px;
 	text-align: center;
 
-	
+
 
 	button {
 		margin-top: 25px;
@@ -740,28 +764,48 @@ header {
 
 	.testimonial-container {
 		display: flex;
-		justify-content:space-around; 
+		justify-content: space-around;
 		width: 70%;
 		margin: auto;
 		background-color: #f7f7f7;
 		padding: 15px;
 		border-radius: 15px;
+
 		.testimonial-avatar {
 			width: 90%;
 		}
 	}
-		a {
-			margin: 20px 0;
-			color: black;
-			text-decoration: underline;
-			width: 100%;
-		}
+
+	a {
+		margin: 20px 0;
+		color: black;
+		text-decoration: underline;
+		width: 100%;
+	}
+
 	.results {
 		width: 70%;
 		margin: auto;
 		padding: 50px 20px 30px 20px;
+
 		img {
 			overflow: hidden;
 		}
 	}
+}
+
+/* media queries */
+
+@media only screen and (max-width: 1024px) {
+	.block-swiper {
+		padding: 0px 25px;
+	}
+	.testimonials {
+	.testimonial-container {
+		width: 100%;
+	}
+	.results {
+		width: 100%;
+	}
+}
 }
