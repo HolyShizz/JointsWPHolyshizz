@@ -45,7 +45,7 @@
 
 		<header class="header" role="banner">
 
-			<div class="header-container" style="background-image: url(<?php echo ot_get_option('header_banner'); ?>);">
+			<div class="header-container" style="background-image: url(<?php echo ot_get_option('header_banner') ?>)">
 
 				<div data-sticky-container>
 					<div data-sticky style="width:100%" data-margin-top="0" data-stick-to="top">

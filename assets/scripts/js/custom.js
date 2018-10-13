@@ -74,4 +74,22 @@ for (let p = 0; p < btnsM.length; p++) {
       event.currentTarget.className.addClass += " active1";
   });
 }
+
+
+var courseTopNav = document.getElementById('course-top-nav');
+var setActiveOnLoad = courseTopNav.firstChild;
+
+function courseNavHighlight (e) {
+  let activeRemove = courseTopNav.getElementsByClassName('active');
+ if (activeRemove > 0) {
+  activeRemove.classList.remove('active')
+} else {e.target.classList.addClass('active');}
+  
+}
+
+courseNavHighlight(setActiveOnLoad);
+courseTopNav.addEventListener('click', function (e){
+  courseNavHighlight(e.target)
+})
+
 */

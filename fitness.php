@@ -153,7 +153,7 @@ get_header(); ?>
 			</div>
 
 			<div class="block-swiper">
-				<div class="coursec" id="coursec">
+				<div class="coursec" id="coursec" data-magellan-target="coursec">
 					<div class="row">
 						<div class="column">
 							<!--Courses 1 step-->
@@ -164,7 +164,7 @@ get_header(); ?>
 							<?php 
 								$coursec_nav = ot_get_option('upper_tabs_nav_and_content', array());
 								if (!empty ($coursec_nav) ) {
-									echo '<div class="button-group expanded">';
+									echo '<div class="button-group expanded" id="course-top-nav">';
 									foreach ($coursec_nav as $coursec_nav_single) {
 									echo	'<button class="button secondary">'.$coursec_nav_single['title'].'</button>';
 									}
