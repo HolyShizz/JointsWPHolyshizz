@@ -1,95 +1,46 @@
 jQuery("[data-menu-underline-from-center] a").addClass("underline-from-center");
 
-/*filterSelection("common");
+var coursecStep1 = document.querySelector("#coursec-step-1");
+var coursecStep1Buttons = coursecStep1.querySelectorAll(".coursec-top-nav");
+var coursecStep2 = document.querySelector("#coursec-step-2");
+var coursecStep2Buttons = document.querySelectorAll("#coursec-step-2 div.cell button.coursec-middle-but");
+var coursecStep3 = document.querySelector("#coursec-step-3");
+var coursecStep3Buttons = document.querySelectorAll("#coursec-step-3 div.cell button.coursec-bottom-but");
+var coursecAll = document.querySelectorAll("#coursec-step-1 button.coursec-top-nav, #coursec-step-2 div.cell button.coursec-middle-but,#coursec-step-3 div.cell button.coursec-bottom-but");
+var coursecInactiveCard = document.querySelectorAll("#coursec-step-2 .card div.inactive");
 
-function filterSelection(c) {
-  let x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "common") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], " show");
+coursecStep1.addEventListener('click', function activeAdd(t) {
+  if (t.target.tagName == "BUTTON") {
+    Array.from(coursecAll).forEach(function (button) {
+      button.classList.replace('primary', 'secondary')
+    })
+    t.target.classList.remove('secondary');
+    t.target.classList.add('primary');
+    Array.from(coursecInactiveCard).forEach(function (inactive) {
+      inactive.classList.remove('inactive');
+    })
   }
-}
+}, 'passive');
 
-function filterSelectionSide(b) {
-  let o, i;
-  o = document.getElementsByClassName("filterDiv1");
-  if (event.currentTarget.classList.contains("show")) {
-    for (i = 0; i < o.length; i++) {
-      w3RemoveClass(o[i], "sideshow");
-      if (o[i].className.indexOf(b) > -1) w3AddClass(o[i], " sideshow");
-    }
+coursecStep3.addEventListener('click', function activeAdd(t) {
+  if (t.target.tagName == "BUTTON") {
+    Array.from(coursecAll).forEach(function (button) {
+      button.classList.replace('primary', 'secondary')
+    })
+    t.target.classList.remove('secondary');
+    t.target.classList.add('primary');
+    Array.from(coursecInactiveCard).forEach(function (inactive) {
+      inactive.classList.add('inactive');
+    })
   }
-}
+}, 'passive');
 
-function w3AddClass(element, name) {
-  let i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
-    }
+coursecStep2.addEventListener('click', function activeAdd(t) {
+  if (t.target.tagName == "BUTTON") {
+    Array.from(coursecStep3).forEach(function (button) {
+      button.classList.replace('primary', 'secondary')
+    })
+    t.target.classList.remove('secondary');
+    t.target.classList.add('primary');
   }
-}
-
-function w3RemoveClass(element, name) {
-  let i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn-top");
-for (let i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function () {
-    let currentNeighbor = document.getElementsByClassName("active1");
-    if (currentNeighbor.length > 0) {
-      currentNeighbor[0].className = currentNeighbor[0].className.replace(" active1", " ");
-    }
-    let current = document.getElementsByClassName("active");
-    if (current.length > 0) {
-    current[0].className = current[0].className.replace(" active", " ");
-    }
-    this.className += " active";
-  });
-}
-
-var btnMiddle = document.getElementById("btnMiddleContainer");
-var btnsM = btnMiddle.getElementsByClassName("btn-middle");
-for (let p = 0; p < btnsM.length; p++) {
-  btnsM[p].addEventListener("click", function () {
-      let current = document.getElementsByClassName("active1");
-      if (current.length > 0) {
-        current[0].className = current[0].className.replace("active1", "");
-      }
-      event.currentTarget.className.addClass += " active1";
-  });
-}
-
-
-var courseTopNav = document.getElementById('course-top-nav');
-var setActiveOnLoad = courseTopNav.firstChild;
-
-function courseNavHighlight (e) {
-  let activeRemove = courseTopNav.getElementsByClassName('active');
- if (activeRemove > 0) {
-  activeRemove.classList.remove('active')
-} else {e.target.classList.addClass('active');}
-  
-}
-
-courseNavHighlight(setActiveOnLoad);
-courseTopNav.addEventListener('click', function (e){
-  courseNavHighlight(e.target)
-})
-
-*/
+}, 'passive')

@@ -154,7 +154,7 @@ get_header(); ?>
 
 			<div class="block-swiper">
 				<div class="coursec" id="coursec" data-magellan-target="coursec">
-					<div class="row">
+					<div class="row visible-lg">
 						<div class="column">
 							<!--Courses 1 step-->
 							<h3>
@@ -164,9 +164,9 @@ get_header(); ?>
 							<?php 
 								$coursec_nav = ot_get_option('upper_tabs_nav_and_content', array());
 								if (!empty ($coursec_nav) ) {
-									echo '<div class="button-group expanded" id="course-top-nav">';
+									echo '<div class="button-group expanded" id="coursec-step-1">';
 									foreach ($coursec_nav as $coursec_nav_single) {
-									echo	'<button class="button secondary">'.$coursec_nav_single['title'].'</button>';
+									echo	'<button class="button secondary coursec-top-nav">'.$coursec_nav_single['title'].'</button>';
 									}
 									echo '	 </div>';
 									
@@ -182,15 +182,17 @@ get_header(); ?>
 								$coursec_step2 = ot_get_option('coursec_step_2_card', array());
 								if (!empty ($coursec_step2)) {
 									echo '<div class="grid-container">
-											  <div class="grid-x grid-padding-x medium-up-4">';
+											  <div class="grid-x grid-padding-x medium-up-4" id="coursec-step-2">';
 									foreach ($coursec_step2 as $coursec_step2_single) {
 									echo '<div class="cell">
+											
 											<div class="card text-center">
+													<div class="inactive"></div>
 												<div class="card-section">
 													<h5 class="course-name">'.$coursec_step2_single['title'].'</h5>
 													<h4>'.$coursec_step2_single['coursec_step_2_card_price_title'].'</h4>
 													<h4>'.$coursec_step2_single['coursec_step_2_card_price_number'].'</h5>
-													<button class="button primary" data-open="'.$coursec_step2_single['js_buttondata_2nd_section'].'">
+													<button class="button primary coursec-middle-but" data-open="'.$coursec_step2_single['js_buttondata_2nd_section'].'">
 													Подробности и оплата
 													</button>
 													
@@ -236,15 +238,16 @@ get_header(); ?>
 								$coursec_step3 = ot_get_option('coursec_step_3_card', array());
 								if (!empty ($coursec_step3)) {
 									echo '<div class="grid-container">
-											  <div class="grid-x grid-padding-x medium-up-4">';
+											  <div class="grid-x grid-padding-x medium-up-4" id="coursec-step-3">';
 									foreach ($coursec_step3 as $coursec_step3_single) {
 									echo '<div class="cell">
+											
 											<div class="card text-center">
 												<div class="card-section">
 													<h5 class="course-name">'.$coursec_step3_single['title'].'</h5>
 													<h4>'.$coursec_step3_single['coursec_step_3_card_price_title'].'</h4>
 													<h4>'.$coursec_step3_single['coursec_step_3_card_price_number'].'</h5>
-													<button class="button primary" data-open="'.$coursec_step3_single['js_buttondata_3nd_section'].'">
+													<button class="button primary coursec-bottom-but" data-open="'.$coursec_step3_single['js_buttondata_3nd_section'].'">
 													Подробности и оплата
 													</button>
 													
@@ -258,7 +261,7 @@ get_header(); ?>
 																  </button>
 														<div class="cell medium-6 ">
 															<h5>'.$coursec_step3_single['title'].'</h5>
-															<p>'.$coursec_step3_single['coursec_step_3_card_included_text'].'</p>
+															<p>'.$coursec_step3_single['coursec_step_3_card_title_purpose'].'</p>
 															<p>'.$coursec_step3_single['coursec_step_3_card_purpose'].'</p>
 														</div>
 
